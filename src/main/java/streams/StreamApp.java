@@ -1,12 +1,7 @@
 package streams;
 
-import com.sun.deploy.util.ArrayUtil;
-
-import java.lang.reflect.Array;
 import java.util.*;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class StreamApp {
 
@@ -61,23 +56,24 @@ public class StreamApp {
 
 
         //3. то же самое, что и 2, но если нет всех элементов
-        // между i и j вернуть пустой список//TODO
+        // между i и j вернуть пустой список
 
-//        int i = 2;
-//        int j = 7;
-//
-//        List<String> strings = new ArrayList<String>(Arrays.asList("24", "64","64", "35"));
-//
-//        List<String> stringIJ =  strings.stream()
-//                .skip(i)
-//                .limit(j-i)
-//
-//
-//
-//
-//        stringIJ.stream().forEach(System.out::println);
-//
-//        System.out.println(stringIJ.size());
+        int i = 2;
+        int j = 7;
+
+        List<String> strings = new ArrayList<String>(Arrays.asList("24", "64","64", "35"));
+
+
+        List<String> stringIJ =  strings.stream()
+                .skip(i)
+                .limit(j-i)
+                .collect(Collectors.toList());
+
+
+
+        stringIJ.stream().forEach(System.out::println);
+
+        System.out.println(stringIJ.size());
 
 
 
@@ -129,7 +125,7 @@ public class StreamApp {
 //        //8. из карты пункта 7 сделать карту наоборот -
 //        // поменять ключ и значения местами (пара способов)
 //
-//        Map<Integer, String> numbersMapinverse = numbersMap.entrySet()
+//        Map<Integer, String> numbersMapInverse = numbersMap.entrySet()
 //                .stream()
 //                .collect(Collectors.toMap(
 //                        k -> k.getValue(),
@@ -137,7 +133,7 @@ public class StreamApp {
 //                ));
 //
 //
-//        numbersMapinverse.entrySet().stream().forEach(System.out::println);
+//        numbersMapInverse.entrySet().stream().forEach(System.out::println);
 
 
         // 9. сделать метод, который принимает параметр i, которое задает
@@ -150,9 +146,12 @@ public class StreamApp {
 //
 //        Integer num = 4;
 //
-//        HashMap<Integer, Double> map = Stream.iterate(first, x -> x + 1)
+//
+//        Map<Integer, Double> collect = Stream.iterate(first, x -> x + 1)
 //                .limit(num - first + 1)
-//                .collect(Collectors.toMap(x -> x, x -> num.doubleValue()/x ));//TODO
+//                .collect(Collectors.toMap(x -> x, x -> x.doubleValue()/(x-1)));
+//
+//        collect.entrySet().stream().forEach(System.out::println);
 
 
     }
