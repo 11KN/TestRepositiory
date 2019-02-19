@@ -63,21 +63,21 @@ public class StreamApp {
         //3. то же самое, что и 2, но если нет всех элементов
         // между i и j вернуть пустой список//TODO
 
-//        int i = 2;
-//        int j = 7;
-//
-//        List<String> strings = new ArrayList<String>(Arrays.asList("24", "64","64", "35"));
-//
-//        List<String> stringIJ =  strings.stream()
-//                .skip(i)
-//                .limit(j-i)
-//
-//
-//
-//
-//        stringIJ.stream().forEach(System.out::println);
-//
-//        System.out.println(stringIJ.size());
+        int i = 2;
+        int j = 7;
+
+        List<String> strings = new ArrayList<String>(Arrays.asList("24", "64","64", "35"));
+
+        List<String> stringIJ =  strings.stream()
+                .skip(i)
+                .limit(j-i)
+
+
+
+
+        stringIJ.stream().forEach(System.out::println);
+
+        System.out.println(stringIJ.size());
 
 
 
@@ -110,26 +110,28 @@ public class StreamApp {
 
 //        List<Integer> list = Arrays.asList(2, 7, 7, 1, 5, 8, 3, 1, 9, 5, 2, 4);
 //
-//        List<Integer> unList = list.stream().distinct().collect(Collectors.toList());
-
-
-
-        //7. из стрима чисел получить карту значений,
-        // где ключ - текстовое представление числа,
-        // а значение - число умноженное на 2
-
+//        List<Integer> unList = list.stream()
+//                .distinct()
+//                .collect(Collectors.toList());
+//
+//
+//
+//        //7. из стрима чисел получить карту значений,
+//        // где ключ - текстовое представление числа,
+//        // а значение - число умноженное на 2
+//
 //
 //        Map<String, Integer> numbersMap = unList.stream()
 //                .collect(Collectors
 //                        .toMap(StreamApp::numToText, x -> x * 2 ));
 //
 //        numbersMap.entrySet().stream().forEach(System.out::println);
+////
+////
+////        //8. из карты пункта 7 сделать карту наоборот -
+////        // поменять ключ и значения местами (пара способов)
 //
-//
-//        //8. из карты пункта 7 сделать карту наоборот -
-//        // поменять ключ и значения местами (пара способов)
-//
-//        Map<Integer, String> numbersMapinverse = numbersMap.entrySet()
+//        Map<Integer, String> numbersMapInverse = numbersMap.entrySet()
 //                .stream()
 //                .collect(Collectors.toMap(
 //                        k -> k.getValue(),
@@ -137,7 +139,7 @@ public class StreamApp {
 //                ));
 //
 //
-//        numbersMapinverse.entrySet().stream().forEach(System.out::println);
+//        numbersMapInverse.entrySet().stream().forEach(System.out::println);
 
 
         // 9. сделать метод, который принимает параметр i, которое задает
