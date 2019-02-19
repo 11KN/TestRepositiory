@@ -61,19 +61,23 @@ public class StreamApp {
 
 
         //3. то же самое, что и 2, но если нет всех элементов
-        // между i и j вернуть пустой список
+        // между i и j вернуть пустой список//TODO
 
-        int i = 2;
-        int j = 7;
-
-        List<String> strings = new ArrayList<String>(Arrays.asList("24", "64","64", "35"));
-
-        List<String> stringIJ =  strings.stream()
-                .skip(i)
-                .limit(j-i)
-                .collect(Collectors.toList());
-
-        stringIJ.stream().forEach(System.out::println);
+//        int i = 2;
+//        int j = 7;
+//
+//        List<String> strings = new ArrayList<String>(Arrays.asList("24", "64","64", "35"));
+//
+//        List<String> stringIJ =  strings.stream()
+//                .skip(i)
+//                .limit(j-i)
+//
+//
+//
+//
+//        stringIJ.stream().forEach(System.out::println);
+//
+//        System.out.println(stringIJ.size());
 
 
 
@@ -136,6 +140,19 @@ public class StreamApp {
 //        numbersMapinverse.entrySet().stream().forEach(System.out::println);
 
 
+        // 9. сделать метод, который принимает параметр i, которое задает
+        // самое большое число в стриме. первый элемент стрима 2. вывести
+        // на экран пара значений - текущий элемент и “число“. “число” это
+        // дробное число, полученное из текущего элемента поделенного на
+        // (текущий элемент - 1)
+
+//        Integer first = 2;
+//
+//        Integer num = 4;
+//
+//        HashMap<Integer, Double> map = Stream.iterate(first, x -> x + 1)
+//                .limit(num - first + 1)
+//                .collect(Collectors.toMap(x -> x, x -> num.doubleValue()/x ));//TODO
 
 
     }
