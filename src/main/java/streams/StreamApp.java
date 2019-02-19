@@ -1,12 +1,5 @@
 package streams;
 
-import com.sun.deploy.util.ArrayUtil;
-
-import java.lang.reflect.Array;
-import java.util.*;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class StreamApp {
 
