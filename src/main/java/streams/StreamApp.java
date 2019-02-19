@@ -70,7 +70,7 @@ public class StreamApp {
 //
 //        List<String> stringIJ =  strings.stream()
 //                .skip(i)
-//                .limit(j-i)
+//                .limit(j-i)//TODO
 //
 //
 //
